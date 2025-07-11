@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afford Medicals - Patient Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Dashboard</h1>
+    <section id="stats">
+      <h2>Stats</h2>
+      <div id="stats-content">
+        <span id="male-count">Male: 0</span>
+        <span id="female-count">Female: 0</span>
+        <span id="total-count">Total: 0</span>
+      </div>
+    </section>
+    <section id="search">
+      <input type="text" id="search-input" placeholder="Search patients by name...">
+    </section>
+    <section id="patient-list-section">
+      <h2>Patients</h2>
+      <ul id="patient-list"></ul>
+    </section>
+    <section id="add-patient-section">
+      <h2>Add New Patient</h2>
+      <form id="add-patient-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required min="0">
+        <select id="gender" required>
+          <option value="">Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <button type="submit">Add Patient</button>
+      </form>
+    </section>
+    <div id="patient-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Patient Details</h2>
+        <div id="modal-details"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html> 
